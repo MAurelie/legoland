@@ -20,7 +20,7 @@ public class TestBoiteLego {
 		//then
 		assertAll(
 				() -> assertEquals(number, boite.getNumber(), "number"),
-				() -> assertEquals(name, boite.getNumber(), "name")
+				() -> assertEquals(name, boite.getName(), "name")
 			);
 	}
 
