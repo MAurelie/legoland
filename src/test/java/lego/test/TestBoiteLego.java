@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
 
-import lego.BoiteLego;
+import lego.Boite;
 
 public class TestBoiteLego {
 
@@ -16,7 +16,7 @@ public class TestBoiteLego {
 		var number = 21318;
 		var name = "La cabane dans l'arbre";
 		//when
-		var boite = new BoiteLego(number, name);
+		var boite = new Boite(number, name);
 		//then
 		assertAll(
 				() -> assertEquals(number, boite.getNumber(), "number"),
