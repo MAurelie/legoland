@@ -58,11 +58,27 @@ public class Boite implements Comparable<Boite>
 	public void setPrice(float price) {
 		this.price = price;
 	}
+	
+	
 	@Override
-	public int compareTo(Boite o) {
-		return 0;
-
+	public int compareTo(Boite b) {
+		
+		if(b.getPrice()<this.getPrice())
+		{
+			return -1;
+		}
+		else if (b.getPrice() == this.getPrice())
+		{
+			return 0;
+		}
+		
+		else 
+		{
+			return 1;
+		}
 	}
+	
+
 
 
 
