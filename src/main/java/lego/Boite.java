@@ -1,5 +1,7 @@
 package lego;
 
+import java.util.Objects;
+
 public class Boite implements Comparable<Boite>
 
 {
@@ -79,7 +81,23 @@ public class Boite implements Comparable<Boite>
 	}
 	
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(number);
+}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (this.getClass() != obj.getClass())
+			return false;
+		Boite other= (Boite) obj;
+
+		return this.number == other.number;
+}
 
 
 }
