@@ -3,6 +3,7 @@ package lego.test;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -28,7 +29,7 @@ public class TestBoiteLego {
 				() -> assertEquals(pieces, boite.getPieces(), "piece"),
 				() -> assertEquals(figurines, boite.getFigurines(), "figurines"),
 				() -> assertEquals(price, boite.getPrice(), "price")
-			);
+				);
 	}
 
 	@Test
@@ -39,19 +40,19 @@ public class TestBoiteLego {
 		var piecesA = 3036;
 		var figurinesA = 4;
 		var priceA = 199.99;
-				
+
 		var numberB = 21317;
 		var nameB = "Steamboat Willie";
 		var piecesB = 751;
 		var figurinesB = 2;
 		var priceB = 89.99;
-		
+
 		var numberC = 75192;
 		var nameC = "Millennium Falcon";
 		var piecesC = 7541;
 		var figurinesC = 11;
 		var priceC = 799.99;
-		
+
 		//when
 		var boiteA = new Boite(numberA, nameA, piecesA, figurinesA, priceA);
 		var boiteB = new Boite(numberB, nameB, piecesB, figurinesB, priceB);
@@ -61,4 +62,21 @@ public class TestBoiteLego {
 		assertTrue(boiteA.compareTo(boiteC)==1);
 		assertTrue(boiteA.compareTo(boiteA)==0);
 	}
+
+	@Test
+	public void TestEquals() {
+		//given
+		var numberA = 21318;
+		var numberB = 21317;
+		var boiteA = new Boite(numberA, "", 0, 0, 0);
+		var boiteB = new Boite(numberA, "", 0, 0, 0);
+		var boiteC = new Boite(numberB, "", 0, 0, 0);
+		
+		var res = boiteA.equals(boiteB);
+		var res2 = boiteA.equals(boiteC);
+		
+		assertTrue(res);
+		assertFalse(res2);
+	}
 }
+
