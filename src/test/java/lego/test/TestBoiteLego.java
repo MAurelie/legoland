@@ -24,7 +24,7 @@ public class TestBoiteLego {
 		assertAll(
 				() -> assertEquals(number, boite.getNumber(), "number"),
 				() -> assertEquals(name, boite.getName(), "name"),
-				() -> assertEquals(pieces, boite.getPiece(), "piece"),
+				() -> assertEquals(pieces, boite.getPieces(), "piece"),
 				() -> assertEquals(figurines, boite.getFigurines(), "figurines"),
 				() -> assertEquals(price, boite.getPrice(), "price")
 			);

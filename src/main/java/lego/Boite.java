@@ -1,6 +1,8 @@
 package lego;
 
-public class Boite {
+public class Boite implements Comparable<Boite>
+
+{
 	private int number;
 	private String name;
 	
@@ -8,10 +10,10 @@ public class Boite {
 
 
 	private int figurines;
-	private float price;
+	private double price;
 
 	
-	public Boite(int number, String name) {
+	public Boite(int number, String name, int pieces, int figurines, double price) {
 		super();
 		this.number = number;
 		this.name = name;
@@ -47,11 +49,16 @@ public class Boite {
 	public void setFigurines(int figurines) {
 		this.figurines = figurines;
 	}
-	public float getPrice() {
+	public double getPrice() {
 		return price;
 	}
 	public void setPrice(float price) {
 		this.price = price;
+	}
+	@Override
+	public int compareTo(Boite o) {
+		return 0;
+
 	}
 	
 	
