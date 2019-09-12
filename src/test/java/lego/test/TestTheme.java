@@ -28,9 +28,9 @@ public class TestTheme {
 	
 	@Test
 	public void testString() {
-		Theme ow = new Theme("Overwatch");
+		Theme ow = new Theme("La médecine gériatrique");
 		System.out.println(ow.toString());
-		assertEquals(ow.toString(),"Le thème est : Overwatch");
+		assertEquals(ow.toString(),"Le thème est : La médecine gériatrique");
 	}
 	
 	
